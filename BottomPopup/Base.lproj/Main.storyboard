@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R9S-Gz-fET">
+                                <rect key="frame" x="16" y="433" width="382" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-2C-Bjm" userLabel="EaseIn">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="30"/>
+                                        <state key="normal" title="EaseIn"/>
+                                        <connections>
+                                            <action selector="actionEaseIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="er3-Su-Vtl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVt-Xv-LbJ" userLabel="EaseOut">
+                                        <rect key="frame" x="127.5" y="0.0" width="127" height="30"/>
+                                        <state key="normal" title="EaseOut"/>
+                                        <connections>
+                                            <action selector="actionEaseOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBu-hf-qcB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktp-Wb-kxq" userLabel="EaseInOut">
+                                        <rect key="frame" x="254.5" y="0.0" width="127.5" height="30"/>
+                                        <state key="normal" title="EaseInOut"/>
+                                        <connections>
+                                            <action selector="actionEaseInOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I2D-ZI-Qq6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="2" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="hMh-aW-ex0">
+                                <rect key="frame" x="160" y="78" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Uo-Da-BFW"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQC-hP-SQ1">
+                                <rect key="frame" x="186" y="135" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kQC-hP-SQ1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AeP-Hi-BB6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R9S-Gz-fET" secondAttribute="trailing" constant="16" id="DJr-5Q-96d"/>
+                            <constraint firstItem="R9S-Gz-fET" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J1G-DH-KOd"/>
+                            <constraint firstItem="R9S-Gz-fET" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MiP-eb-zAG"/>
+                            <constraint firstItem="hMh-aW-ex0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wgx-TW-PFJ"/>
+                            <constraint firstItem="kQC-hP-SQ1" firstAttribute="top" secondItem="hMh-aW-ex0" secondAttribute="bottom" constant="25" id="bId-WP-Xl1"/>
+                            <constraint firstItem="R9S-Gz-fET" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cjX-Tr-F1b"/>
+                            <constraint firstItem="hMh-aW-ex0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="tbS-FX-3pd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="durLabel" destination="kQC-hP-SQ1" id="ybg-tV-I77"/>
+                        <outlet property="stepper" destination="hMh-aW-ex0" id="lqC-0C-Qc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+    </scenes>
+</document>
